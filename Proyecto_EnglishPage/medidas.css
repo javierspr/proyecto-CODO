@@ -1,0 +1,42 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    color: blue;
+    background-color: lightblue;
+}
+h2{
+    color: green;
+}
+.grande-px{font-size: 24px ;}
+.chico-px{font-size: 12px ;}
+
+/*calcular de px a em si 1 em es 16px 40px es 2.5em*/
+/*calcular de em a px si 1 em es 1em 16px es 2.5em*/
+.fuente-em1{font-size: 2.5em;}
+.fuente-em2{font-size: 1.875em;}
+.fuente-em3{font-size: 0.87em;}
+
+/*establecer un tamaño bases*/
+:root{ /*relativaas en rem*/
+    font-size: 20px;}
+.fuente-rem1{font-size: 2.5rem;} /*2.5 veces mas el tamaño base 50px*/
+    
+.fuente-rem2{font-size: 0.5rem;}
+
+/*medidas relativas %*/
+.fuente-porc1{
+    font-size: 75%;
+}
+.fuente-porc2{font-size: 200%;}
+
+/*medidas flexibles*/
+.fuente-vw1{
+    font-size: 2vw
+}
+.fuente-vw2{
+    font-size: 3vw
+}.fuente-vw3{
+    font-size: 5vw
+}

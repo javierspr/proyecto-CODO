@@ -1,0 +1,17 @@
+.contenedor{
+    background-color: pink;
+    padding:20px;
+    display: grid;
+   /* grid-template-columns: /*divide contenedor en col 100px 100px 100px 200px;*/
+grid-template-columns: 50% 30% 20%;
+gap:20px;
+grid-template-rows: 30´x 150px 100px;
+}
+
+.caja{
+    background-color: green;
+    padding: 30px;
+text-align: center;
+border: 1px;
+
+}

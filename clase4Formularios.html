@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1 ><center>Clase 4 HTML Formularios</center></h1>
+    <form action="" method="post">
+<fieldset>
+    <legend>Datos Personales: </legend>
+        <br>
+    <label for="nom">Nombre: </label>    
+    <input type="text" name="nombre" id="nom" required size="20" maxlength="15" placeholder="Ingrese su nombre...">
+<br>
+<br>
+<label for="ape">Apellido: </label>    
+    <input type="text" name="Apellido" id="ape" required>
+<br>
+<br>
+<label for="dni">DNI: </label>    
+    <input type="number" name="dni" id="dni" min="1000000" max="60000000">
+<br>
+<br>
+<label for="Tramites">Numero de Tramite</label>
+<input type="password" name="tramite" id="tramite">
+<br>
+<br>
+<label for="fecnac">Fecha de Nacimiento: </label>
+<input type="date" name="fecnac" id="fecnac">
+<br>
+<br>
+<label for="correo">Email</label>
+<input type="correo" name="correo" id="tramite">
+<br>
+<br>
+<label for="Adjunto">Adjuntar foto</label>
+<input type="file" name="foto" id="foto">
+<br>
+<label for="color">Color favorito</label>
+<input type="color" name="color">
+<br>
+<br>
+<label for="edad">Edad</label>
+<input type="number" min="18" max="120">
+<br>
+
+
+
+
+<p>* Datos obligatorios</p>
+    <input type="Submit" value="Enviar">
+</fieldset>
+<br>
+<fieldset>
+    <legend>Datos para la inscripcion: </legend>
+<br>
+<label for="turno">Seleccione Turno</label>
+<select name="turno" id="turno" size="">
+    <option value="1">Mañana</option>
+    <option value="2">Tarde</option>
+    <option value="3">Noche</option>
+</select>
+<br>
+<label for="op">Conocimientos previos: </label>
+<input type="checkbox" name="op" value="1"> html
+<input type="checkbox" name="op" value="2"> css
+<input type="checkbox" name="op" value="3"> js
+<br>
+<label for="rb">Estoy interesado en ...</label>
+<input type="radio" name="rb" value="1" > Full Stack-Python
+<input type="radio" name="rb" value="2" checked> Full Stack-Java
+<input type="radio" name="rb" value="3" > Full Stack-php
+<input type="radio" name="rb" value="4" > Diseño UX
+
+</fieldset>
+<BR>
+<label for="comentario" cols="30" rows="5"  >Escriba su consulta</label>
+<textarea name="checkbox" id="" cols="30" rows="10">Escriba su consulta</textarea>
+
+
+</form>
+</body>
+</html>

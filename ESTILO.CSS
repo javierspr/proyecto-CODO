@@ -1,0 +1,35 @@
+P{
+    font-family: "ARIAL";
+    color: blue;
+    background-color: aquamarine;
+    padding: 20px;   
+}
+/*para vincular este archivo*/
+
+h3{
+    color: green;
+    font-family: "comic Sans MS";
+    margin-left: 20PX;
+
+
+
+
+}
+/*selector universal*/
+*{
+    background-color: beige;
+    font-family: Verdana;
+}
+
+h1{ 
+    background-color: lavender;
+    color: blueviolet !important; /*generaliza todo a donde diga important*/
+}
+
+.clase{
+    color: red; /*tiene mas peso clase que etiqueta*/
+}
+#id{
+    color: blue; /*el selector id tiene mas especificidad que clase,
+    a su vez, de etiquita*/
+}

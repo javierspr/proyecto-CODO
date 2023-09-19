@@ -1,0 +1,115 @@
+/**{ padding:0;
+box-sizing: border-box;}
+*/
+
+body, main, footer {
+    border: 3px cornflowerblue solid;
+    min-height: 50px;
+    margin: 0.5rem;
+}
+
+    
+
+html{
+    font-size: 1rem;
+    height: 100%;
+}
+
+main{
+    min-height: 200px;
+    border: 3px black solid;
+}
+
+main>div  
+{
+    min-height: 100px;
+    margin: 0.5rem;
+    border: 2px lightblue solid;
+}
+
+main > aside   {
+    min-height: 100px;
+    margin: 0.5rem;
+    border: 2px lightseagreen solid;
+}
+article{
+    border: 3px violet solid; 
+    min-height: 100px;
+    margin: 0.5rem;
+    padding: 5px;
+}
+header {
+  background: url("../E-4u.png");
+  min-height: 50%; 
+  max-height: 100%;
+  height: 200px;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 316px) {
+header-img{
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    display: flex;   
+    }}
+.secciones 
+{
+min-height: 100px;
+margin: 0.5rem;
+border: 2px blue solid;
+padding: 5px;
+}
+
+
+/*
+header{
+    display: flex;
+    padding: auto;    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;      
+    background-image: "e-4u.png";
+    width: 100%;
+    padding-left: 20px;
+    }
+
+    *img{   display: block;  flex-wrap: wrap;}
+ul  {
+    display:flex;
+    align-items: center;
+    background-color: rgb(169, 223, 205); 
+    border-style: ridge;
+    
+}
+
+UL LI{
+    font-size: larger;
+    padding: auto;
+    width: 100%;
+    display: flex;
+    
+
+}
+ul li a{
+    color: rgb(50, 50, 119) ;
+    text-decoration:none;    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    
+}
+
+
+.td {
+    font-size:small;
+    border-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    text-align: right;    
+    padding: 10px;
+    text-decoration-line: none; 
+          
+}
+td th a:hover   {
+    background-color: darkgray;
+    opacity: 30;    
+}
+
+
+*/

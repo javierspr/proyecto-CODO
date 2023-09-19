@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <h1>Primer Registro</h1>
+    <form action="", method="post"></form>
+    <fieldset>
+        <legend style="font-size: large; font-style: italic; ">Ingrese sus datos para completar el registro</legend>
+        <p style="font-size: smaller; ">(*) Datos obligatorios para el registro.</p>
+        <label for="user">Usuario (*)</label>
+        <input type="text", name="user", required, id="user", size="30" placeholder="Ingresar usuario (hasta 8 caracteres)">
+        <br><br>
+        <label for="lname">Apellido (*)</label>
+        <input type="text", name="Apellido", required, id="lname", placeholder="Ingrese aquí su apellido...">
+        <br><br>
+        <label for="name">Nombre (*)</label>
+        <input type="text", name="Nombre", required, id="name", placeholder="Ingrese aquí su nombre...">
+        <br><br>
+        <label for="cel">Teléfono de contacto</label>
+        <input type="number", name="tel", id="cel", placeholder="Teléfono o celular opcional..." maxlength="12">
+        <br><br>
+        <label for="mail">Correo electrónico (*)</label>
+        <input type="correo", name="Correo", required, size="35" id="mail", placeholder="Ingrese aquí su correo... ">
+        <br><br>
+        <label for="pass">Contraseña (*)</label>
+        <input type="password", name="password", required, id="pass", placeholder="Ingrese una contraseña... ">
+        <br><br>
+        <center><input  type="Submit"  value="Registrarse"  style="color: rgb(14, 14, 121); font-size: large;  "></center>
+        
+
+
+
+    </fieldset>
+</body>
+</html>

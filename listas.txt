@@ -1,0 +1,31 @@
+listas
+tipos de listas
+se usan las etiquetas: 
+ul  lista desordenada u;
+ol lista ordenada.
+
+cada elemento de la lista se representa con LI y su padre siempre tiene que ser una OL o UL
+
+LISTAS DEPENDIENTES
+listas anidadas
+(boton derecho: dar formato al documento -para ordenar el codigo-)
+
+LISTAS DE DEFINICION
+EJEMPLO
+leche
+	descremada
+	entera
+DL DEFINITION LIST (dentro de dl va...
+DD DEFINITION LISTO
+DT DEFINITION TITLE
+
+rutas
+absolutas:nombre de dominio externo
+relativo: directorio interno (desde donde estoy)
+
+
+hacer varios archivos
+index.html donde tenemos los indices de nuestra pagina
+contacto, producto, quienes somos, etc
+carpetas de IMG, de CSS, JS...
+

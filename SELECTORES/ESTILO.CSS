@@ -1,0 +1,61 @@
+P{
+    font-family: "ARIAL";
+    color: blue;
+    background-color: aquamarine;
+    padding: 20px;   
+}
+/*para vincular este archivo*/
+
+h3{
+    color: green;
+    font-family: "comic Sans MS";
+    margin-left: 20PX;
+
+
+
+
+}
+/*selector universal*/
+*{
+    background-color: beige;
+    font-family: Verdana;
+    padding: 30px; /*relleno*/
+}
+h2{
+    border-bottom: 1px solid brown ; /*borde inferior*/
+    text-align: center;
+}
+
+p{
+    color: saddlebrown;
+}
+.parrafo-grande{
+    font-size: 26px;
+} /*le doy el atributo al parrafo que quiero con p parrafo grande...*/
+
+.foto1{
+    width: 400px;
+    height: 200px;
+}
+.foto2{
+    width: 100px;
+    height: 50px;
+}
+#fecha{
+    text-align: right;
+    font-size: italic; /*cursiva*/
+    color: saddlebrown;
+    font-weight: bold; /*negrita*/
+} 
+span{
+    display: inline; /*elemento en linea*/
+   /* display: block; /*en bloque, para abajo*/
+  /*  display: inline-block; /*alto y ancho*/
+
+    
+}
+img.txtArriba{
+    vertical-align: text-top;
+    font-display: bold;
+    align-content: space-between;  
+  }
