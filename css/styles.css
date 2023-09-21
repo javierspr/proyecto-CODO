@@ -40,17 +40,10 @@ body {
   display: none;
 }
 
-/*LOGO CENTRAL DEL HEADER*/
-
-.header_e-lorem {
-  margin-left: 11em;
-  height: 80%;
+/*logo solo para version celular*/
+.header_logo_celular{
+  display: none
 }
-
-.header_e-lorem img {
-  height: 100%
-}
-
 /*NAV*/
 
 .navbar_container {
@@ -81,7 +74,7 @@ body {
 .aside {
   height: 100%;
   margin-top: 6em;
-  background-color: lightblue;
+  background-color: #6f7594;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -111,13 +104,18 @@ body {
 }
 
 .contenedor-buscador input {
-  width: 75%;
-  height: 1.6em;
-  padding-left: 0.5em;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  background-color: white;
+  gap: 0.5em;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-radius: 1em;
 }
 
 .contenedor-buscador img {
-  width: 15%;
+  height: 100%;
+
 }
 
 /* Footer */
@@ -163,6 +161,7 @@ footer {
   .header_input {
     display: flex;
     height: 35%;
+    margin-left: 1em;
     align-items: center;
     background-color: white;
     gap: 0.5em;
@@ -256,7 +255,7 @@ footer {
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .header_e-lorem {
     display: none;
   }
@@ -276,8 +275,15 @@ footer {
   .aside {
     display: none;
   }
-
-  .header_input {
-    display: none;
+  .header_logo_celular{
+    display: block;
+    height: 70%;
+    margin-left: 1em;
+  }
+  .header_logo_celular img{
+    height: 100%;
+  }
+  .header_logo  {
+    display: none
   }
 }
