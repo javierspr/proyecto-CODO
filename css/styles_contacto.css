@@ -100,8 +100,8 @@ footer {
 .padre {
     display: flex;
     flex-wrap: wrap;
-    margin: 9em,3em,3em;
-    }
+    margin: 8em 2em 2em 2em;
+}
 
 /* Formulario de contacto */
 .contact-form {
@@ -206,10 +206,11 @@ footer {
     .navbar_container a:hover {
         background-color: #003088;
     }
-    
+
     .padre {
         flex-direction: column;
     }
+
     .contact-form,
     .contact-info,
     .map {
@@ -228,10 +229,6 @@ footer {
 
     .nav_bar {
         display: none;
-    }
-
-    .padre {
-        flex-direction: column;
     }
 
     .menu-hamburguesa {
@@ -253,18 +250,7 @@ footer {
         display: none;
     }
 
-    .menu-hamburguesa {
-        font-size: 30px;
-        cursor: pointer;
-        display: block;
-        color: white;
-        margin-right: 0.5em;
-    }
-
-    .aside {
-        display: none;
-    }
-
+   
     .header_logo_celular {
         display: block;
         height: 70%;
