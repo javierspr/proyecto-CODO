@@ -41,9 +41,10 @@ body {
 }
 
 /*logo solo para version celular*/
-.header_logo_celular{
+.header_logo_celular {
   display: none
 }
+
 /*NAV*/
 
 .navbar_container {
@@ -147,9 +148,57 @@ footer {
 
 /*-------borrar esto-------*/
 
-.contenido {
-  text-align: justify;
-  margin: 9em 22em 5em 5em;
+.titulo {
+  font-size: 2em;
+  padding-top: 4em;
+  padding-left: 2em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.05em;
+}
+
+.container__cards {
+  margin: 1.5em 17em 3em 3em;
+  gap: 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 20%;
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 1%;
+  gap: 2%;
+  border: rgb(221, 221, 221) solid;
+  background-color: #f5f5f5;
+  margin-bottom: 30px;
+}
+
+.img__producto {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  align-items: auto;
+}
+
+.descripcion__producto {
+  display: block;
+  text-align: center;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.botones__img {
+  height: 2em;
+  display: inline-block;
 }
 
 /*--------------------------*/
@@ -275,15 +324,18 @@ footer {
   .aside {
     display: none;
   }
-  .header_logo_celular{
+
+  .header_logo_celular {
     display: block;
     height: 70%;
     margin-left: 1em;
   }
-  .header_logo_celular img{
+
+  .header_logo_celular img {
     height: 100%;
   }
-  .header_logo  {
+
+  .header_logo {
     display: none
   }
 }
