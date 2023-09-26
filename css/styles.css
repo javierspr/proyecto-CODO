@@ -5,11 +5,11 @@
   margin: 0;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
   background-color: #e0e0e0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* HEADER */
@@ -63,7 +63,6 @@ body {
   color: white;
   font-size: 1em;
   padding: 1.2em 0.5em;
-  letter-spacing: 1.3px;
 }
 
 .navbar_container a:hover {
@@ -261,6 +260,15 @@ footer {
     background-color: #003088;
   }
 
+  .container__cards {
+    text-align: justify;
+    margin: 2em 3em 5em 3em;
+  }
+
+  .card {
+    width: 30%;
+    margin: 20px auto;
+  }
 }
 
 
@@ -285,6 +293,15 @@ footer {
     display: none;
   }
 
+  .container__cards {
+    border: 5px;
+  }
+
+  .card {
+    width: 45%;
+    margin: auto;
+    margin-bottom: 30px;
+  }
 }
 
 
@@ -321,5 +338,16 @@ footer {
 
   .header_logo {
     display: none
+  }
+
+  .titulo {
+    text-align: center;
+    letter-spacing: normal;
+    padding-left: 0;
+  }
+
+  .card {
+    width: 80%;
+    margin: 15px auto;
   }
 }
