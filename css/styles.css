@@ -152,49 +152,62 @@ footer {
 .titulo {
   font-size: 2em;
   padding-top: 4em;
-  padding-left: 2em;
+  padding-left: 5em;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   letter-spacing: 0.05em;
 }
 
 .container__cards {
-  margin: 1.5em 17em 3em 3em;
-  gap: 5%;
+  margin: 1.5em 25em 3em 10em;
+  gap: 2em;
   display: flex;
   flex-wrap: wrap;
 }
 
 .card {
-  width: 20%;
-  height: 20em;
+  padding: 10px;
+  width: 18em;
+  height: 24em;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 1%;
-  gap: 2%;
   border: rgb(221, 221, 221) solid;
   background-color: #f5f5f5;
   margin-bottom: 30px;
+
 }
 
 .img__producto {
-  width: 100%;
-  height: 80%;
-  object-fit: cover;
-  align-items: auto;
+  height: 75%;
 }
 
 .descripcion__producto {
-  display: block;
+  margin-top: 0.5em;
+  display: inline-block;
   text-align: center;
-  font-size: 0.9em;
-  letter-spacing: 0.5px;
+  font-size: 0.8em;
+  font-weight: bold;
 }
 
 .botones {
   display: flex;
-  justify-content: space-between;
-  align-items: end;
+  justify-content: end;
+}
+
+
+button {
+  display: flex;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004d9f;
 }
 
 .botones__img {
