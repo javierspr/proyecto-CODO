@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const mensaje = document.getElementById("mensaje").value.trim();
   
     // Validación de campos vacíos
-    if (nombre === "" || email === "" || mensaje === "") {
+    if (nombre == 0 || email == 0 || mensaje == 0) {
       event.preventDefault(); // Prevenir el envío del formulario
       alert("Por favor, complete todos los campos del formulario.");
     }

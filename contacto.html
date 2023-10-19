@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img/e-lorem.ico" type="favicon">
+  <link rel="shortcut icon" href="img/e-lorem.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/styles_contacto.css">
   <title>E-Lorem</title>
 </head>
-
 <body>
-
   <header>
     <div class="header-container">
       <div class="header_logo">
@@ -23,32 +20,30 @@
           <img src="img/logo header celular.png" alt="logo">
         </a>
       </div>
-<div>
-      <label for="toggle-menu" class="menu-hamburguesa">&#9776;</label>
-    </div>
-    <nav class="nav_bar">
-      <ul class="navbar_container">
-        <li><a href="index.html">Principal</a></li>
-        <li><a href="index.html">Ofertas</a></li>
-        <li><a href="index.html">Categorias</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
+      <div>
+        <label for="toggle-menu" class="menu-hamburguesa">&#9776;</label>
+      </div>
+      <nav class="nav_bar">
+        <ul class="navbar_container">
+          <li><a href="index.html">Principal</a></li>
+          <li><a href="index.html">Ofertas</a></li>
+          <li><a href="index.html">Categorías</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-
   <main>
-
     <section class="padre">
       <div class="contact-form">
         <h2>Contacto</h2>
-        <form action="enviar.php" method="POST">
+        <form action="" name="form" method="get">
           <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required>
+          <input type="text" id="nombre" name="nombre">
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
+          <input type="TEXT" id="email" name="email">
           <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          <textarea id="mensaje" name="mensaje" rows="4"></textarea>
           <button type="submit">Enviar</button>
         </form>
       </div>
@@ -64,20 +59,16 @@
           width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <script>src='js/contacto.js'</script>
     </section>
+    
   </main>
-
   <footer>
     <div class="social-media">
-      <a href="https://www.facebook.com/mitiendaonline"><img src="Img/facebook.svg" alt="Facebook">
-      </a>
-      <a href="https://www.instagram.com/mitiendaonline"><img src="Img/instagram.svg" alt="Instagram">
-      </a>
+      <a href="https://www.facebook.com/mitiendaonline"><img src="img/facebook.svg" alt="Facebook"></a>
+      <a href="https://www.instagram.com/mitiendaonline"><img src="img/instagram.svg" alt="Instagram"></a>
     </div>
     <p>&copy; 2023 Mi Tienda Online. Todos los derechos reservados.</p>
   </footer>
-
+  <script src="js/Contacto.js"></script>
 </body>
-
 </html>
