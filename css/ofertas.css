@@ -24,6 +24,7 @@ body {
     height: 6em;
     align-items: center;
     justify-content: space-between;
+    z-index: 1
 }
 
 /*LOGO IZQUIERDO DEL HEADER*/
@@ -76,8 +77,8 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    margin-top: 3em;
-    padding: 3em;
+    margin-top: 1em;
+    padding: 1em;
     background-color: #001e57;
     color: white;
     text-align: center;
@@ -96,7 +97,7 @@ footer {
     width: 2em;
 }
 
-/*MEDIA QUERIES*/
+/*MEDIA QUERIES DE HEADER Y FOOTER*/
 
 @media (max-width: 1000px) {
     .header_input {
@@ -195,10 +196,17 @@ footer {
     }
 }
  /* Estilos para la animación del título */
- .monthly-offers-title {
+ .Promo_bancaria {
     margin-top: 100px;
+}
+ .Promo_bancaria-title {
+    font-size: 2.5em;
+    margin-top: 10px;
     animation: blink 3s infinite;
     padding: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 10px black;
 
 }
 
@@ -206,42 +214,50 @@ footer {
     0%, 100% { color: #003088; }
     50% { color: rgba(72, 25, 201, 0.719); }
 }
-.monthly-offers {
-    
-    text-align: center;
-  }
-  
-  .monthly-offers-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
+
   .promo-banners {
     display: flex;
    flex-direction: row;
     justify-content: space-between;
-  }
+     }
   
   .promo-banner {
     margin: 5px;
-    width: 25%;
-  }
+    padding: 10px;
+    }
   .promo-banner img{
     width: 100%;
   }
+  @media (max-width: 800px) {
+    .promo-banners {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+        gap: 5px; /* Espacio entre los elementos */
+      }
+      
+    .promo-banners {
+        align-items: center;
+        width: 100%;
+      }
+    
+      .promo-banner {
+        margin: 5px;
+        width: 100%;
+      }
+    }
   
-  /* Estilos para pantallas más pequeñas (por ejemplo, cuando el ancho es menor a 768px) */
   @media (max-width: 600px) {
     
     .promo-banners {
-      flex-direction: column;
-      align-items: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* UNA COLUMNA */
+        gap: 5px; /* Espacio entre los elementos */
     }
   
     .promo-banner {
       flex: none;
-      margin: 5px;
-      width: 100%;
+      margin: 15px;
+      width: 80%;
     }
   }
   
@@ -251,25 +267,42 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    z-index: 0;
 }
 
 .carousel-container {
-    width: 25%; 
+    width: 30%; 
     max-width: 120em;
     margin: 0 auto;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra opcional */
-    overflow: hidden; /* Oculta elementos que desbordan */
-    position: relative; /* Añade posición relativa para controlar los elementos internos */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); 
+    overflow: hidden; 
+    position: relative;
+    z-index: 0;
 }
 
 .carousel-item {
     display: flex;
     transition: transform 0.5s ease-in-out;
     transform: translateX(0);
+    z-index: 0;
 }
 
 .carousel-item img {
-    width: 100%; /* Ajusta el ancho de la imagen según tus necesidades */
+    width: 100%; 
     height: auto;
     display: block;
+    z-index: 0;
 }
+@media (max-width: 800px) {
+    .carousel-container {
+        width: 50%; 
+    }
+}
+  @media (max-width: 600px) {
+    .carousel-container {
+        width: 80%; 
+    }
+}
+  
+  
