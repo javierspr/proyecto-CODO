@@ -1,4 +1,4 @@
-const API_url = 'https://fakestoreapi.com/products'; // Cambia la URL de la API según sea necesario
+const API_url = 'https://fakestoreapi.com/products';
 const productContainer = document.getElementById('product-container');
 const asideContainer = document.querySelector('.aside');
 const totalContainer = document.querySelector('.total');

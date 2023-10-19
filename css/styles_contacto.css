@@ -69,13 +69,13 @@ body {
 }
 
 .faq__container {
-  width: 48%;
+  width: 95%;
   padding: 1em;
   margin-left: 2em;
 }
 
 .titulo__preguntas-respuestas {
-  margin-bottom: 0.7em;
+  margin-bottom: 0.8em;
   font-size: 1.5em;
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -84,7 +84,7 @@ body {
 .pregunta {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #133e5a;
-  border-bottom: solid black;
+  border-bottom: 1px solid black;
   color: white;
   padding: 1em;
   text-align: center;
@@ -107,7 +107,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  margin-top: 3em;
+  margin-top: 1em;
   padding: 3em;
   background-color: #001e57;
   color: white;
@@ -153,7 +153,6 @@ footer {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  /* Cambiamos el ancho al 100% para que se ajuste correctamente en pantallas pequeÃ±as */
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
