@@ -244,32 +244,32 @@ footer {
       width: 100%;
     }
   }
+  
 /* Estilos para el carrusel de descuentos */
 .discount-carousel {
-    text-align: center;
-}
-
-.discount-carousel h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-container {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: hidden;
+    width: 25%; 
+    max-width: 120em;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+    overflow: hidden; /* Oculta elementos que desbordan */
+    position: relative; /* Añade posición relativa para controlar los elementos internos */
 }
 
 .carousel-item {
-    width: 250px;
-    margin-right: 10px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    text-align: center;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
 }
 
 .carousel-item img {
-    max-width: 100%;
+    width: 100%; /* Ajusta el ancho de la imagen según tus necesidades */
     height: auto;
-    margin-bottom: 10px;
+    display: block;
 }
