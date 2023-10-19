@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const nombre = document.getElementById("nombre").value.trim();
     const email = document.getElementById("email").value.trim();
     const mensaje = document.getElementById("mensaje").value.trim();
-  
+
     // Validación de campos vacíos
     if (nombre == 0 || email == 0 || mensaje == 0) {
       event.preventDefault(); // Prevenir el envío del formulario
@@ -17,6 +17,20 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!email.match(emailRegex)) {
       event.preventDefault(); // Prevenir el envío del formulario
       alert("Formato incorrecto. Ingrese un correo electrónico válido.");
+    }
+  });
+});
+
+
+var preguntas = document.querySelectorAll(".pregunta");
+
+preguntas.forEach(function (pregunta) {
+  pregunta.addEventListener("click", function () {
+    var respuesta = pregunta.nextElementSibling;
+    if (respuesta.style.display === "none" || respuesta.style.display === "") {
+      respuesta.style.display = "block";
+    } else {
+      respuesta.style.display = "none";
     }
   });
 });
