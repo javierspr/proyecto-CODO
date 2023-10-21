@@ -9,7 +9,6 @@
 body {
   background-color: #e0e0e0;
   padding-top: 9em;
-  padding-right: 20em;
 }
 
 /* Header */
@@ -71,17 +70,17 @@ body {
 .aside {
   width: 20em;
   height: 100%;
-  margin-top: 6em;
+  margin: 6em 0;
   background-color: #6f7594;
   display: flex;
   flex-direction: column;
   position: fixed;
   gap: 2px;
   align-items: center;
-  padding: 0 1em;
   top: 0;
   right: 0;
   overflow: auto;
+  padding: 0 1em 20em 1em;
 }
 
 .aside .item {
@@ -96,7 +95,7 @@ body {
   width: 100%;
   justify-content: center;
   gap: 0.5em;
-  
+
 }
 
 
@@ -121,19 +120,19 @@ body {
   margin: 1em;
   font-size: 20px;
 }
+
 .carro-compra {
   height: 2.5em;
   margin: 0.5em
- }
+}
 
-.carrito{
+.carrito {
   display: flex
-
 }
 
 footer {
   position: relative;
-  bottom: 0;
+  bottom: auto;
   left: 0;
   width: 100%;
   margin-top: 3em;
@@ -157,15 +156,15 @@ footer {
 }
 
 .titulo {
-  margin-left: 5%;
+  text-align: center;
+  margin-right: 10em;
   font-size: 1.8em;
   letter-spacing: 0.05em;
 }
 
-/* Contenido principal del HTML */
 
 .container__cards {
-  margin: 3em 0;
+  margin: 3em 19em 3em 0;
   padding: 0 5%;
   gap: 1em;
   display: flex;
@@ -229,11 +228,14 @@ button:hover {
 /*MEDIA QUERIES*/
 
 @media (max-width: 1000px) {
-
-  body {
-    padding-right: 0;
+  .titulo {
+    margin-right: 0;
+    text-align: center;
   }
 
+  .container__cards {
+    margin: 3em 0;
+  }
 
   .header_input {
     display: flex;
@@ -301,11 +303,6 @@ button:hover {
 
 
 @media (max-width: 800px) {
-  .titulo {
-    margin-left: 0;
-    text-align: center;
-  }
-
 
   .header_e-lorem {
     display: none;
@@ -330,11 +327,6 @@ button:hover {
 
 
 @media (max-width: 600px) {
-
-  #product-container {}
-
-  .card {}
-
   .header_e-lorem {
     display: none;
   }
