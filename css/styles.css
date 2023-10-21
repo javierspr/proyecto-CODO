@@ -81,6 +81,7 @@ body {
   padding: 0 1em;
   top: 0;
   right: 0;
+  overflow: auto;
 }
 
 .aside .item {
@@ -90,7 +91,7 @@ body {
 
 .carro-compra {
   height: 5em;
-  padding-top: 2em;
+  margin: 2em 0;
 }
 
 .contenedor-buscador {
@@ -102,11 +103,6 @@ body {
   margin-bottom: 2em;
 }
 
-.texto-aside {
-  padding: 2em 0;
-  color: black;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
 .contenedor-buscador input {
   display: flex;
@@ -122,6 +118,15 @@ body {
   height: 100%;
 
 }
+
+.total {
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 2em;
+  font-size: 20px;
+}
+
+
 
 footer {
   position: relative;
