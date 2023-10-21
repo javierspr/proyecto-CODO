@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
 body {
@@ -89,18 +89,14 @@ body {
   color: #fcfcfc;
 }
 
-.carro-compra {
-  height: 5em;
-  margin: 2em 0;
-}
-
 .contenedor-buscador {
+  margin: 1.5em;
   display: flex;
   height: 1.6em;
   width: 100%;
   justify-content: center;
   gap: 0.5em;
-  margin-bottom: 2em;
+  
 }
 
 
@@ -122,11 +118,18 @@ body {
 .total {
   text-transform: uppercase;
   color: white;
-  margin-bottom: 2em;
+  margin: 1em;
   font-size: 20px;
 }
+.carro-compra {
+  height: 2.5em;
+  margin: 0.5em
+ }
 
+.carrito{
+  display: flex
 
+}
 
 footer {
   position: relative;
@@ -154,9 +157,8 @@ footer {
 }
 
 .titulo {
-  margin-left: 10%;
+  margin-left: 5%;
   font-size: 1.8em;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   letter-spacing: 0.05em;
 }
 

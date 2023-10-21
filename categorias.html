@@ -1,62 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/categorias.css">
-    <link rel="stylesheet" href="css/styles.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/e-lorem.ico" type="favicon">
+  <link rel="stylesheet" href="css/categorias.css">
+  <title>E-Lorem</title>
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-          <div class="header_logo">
-            <a href="index.html">
-              <img src="img/logo solo.png" alt="logo">
-            </a>
-          </div>
-          <div class="header_logo_celular">
-            <a href="index.html">
-              <img src="img/logo header celular.png" alt="logo">
-            </a>
-          </div>
-          <div class="header_input">
-            <input type="search" name="input" id="header-input">
-            <img src="Img/search-icon.png" alt="search-icon">
-          </div>
-          <label for="toggle-menu" class="menu-hamburguesa">&#9776;</label>
-    
-          <nav class="nav_bar">
-            <ul class="navbar_container">
-              <li><a href="index.html">Principal</a></li>
-              <li><a href="index.html">Ofertas</a></li>
-              <li><a href="categorias.html">Categorias</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-    
-      <aside class="aside">
-        <img class="carro-compra" src="Img/carro-de-la-compra.png" alt="">
-        <div class="contenedor-buscador">
-          <input type="search" name="buscador" id="buscador">
-          <img src="Img/search-icon.png" alt="search-icon">
-        </div>
-      </aside>
-    
-    
-    
+
+  <header>
+    <div class="header-container">
+      <div class="header_logo">
+        <a href="index.html">
+          <img src="img/logo solo.png" alt="logo">
+        </a>
+      </div>
+      <div class="header_logo_celular">
+        <a href="index.html">
+          <img src="img/logo header celular.png" alt="logo">
+        </a>
+      </div>
+      <div class="header_input">
+        <input type="search" name="input" id="header-input">
+        <img src="Img/search-icon.png" alt="search-icon">
+      </div>
+      <label for="toggle-menu" class="menu-hamburguesa">&#9776;</label>
+
+      <nav class="nav_bar">
+        <ul class="navbar_container">
+          <li><a href="index.html">Principal</a></li>
+          <li><a href="Promos.html">Promos</a></li>
+          <li><a href="categorias.html">Categorias</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <aside class="aside">
+    <div class="contenedor-buscador">
+      <input type="search" name="buscador" id="buscador">
+      <img src="Img/search-icon.png" alt="search-icon">
+    </div>
+    <div class="carrito">
+      <img class="carro-compra" src="Img/carro-de-la-compra2.png" alt="">
+      <div class="total">Total: $0.00</div>
+    </div>
+  </aside>
 
     <div >
     <ol class="categorias">
-        <li class="ul li a" ><img src="img/indum.png"  ><a href="indum.html" > <b>Indumentaria Masculina</b></a> </li>
-        <li class="ul li a"><img src="img/induf.png" > <a href="induf.html"><b>Indumentaria Femenina</b></li></a>
-        <li class="ul ll a"><img src="img/electro.png"  ><a href="electro.html" > <b>Electrodomésticos</b></a> </li>
-        <li class="ul li a"><img src="img/joyeria.png"  ><a href="joyeria.html"><b>Joyería</b></a> </li>
-       </ul>
+        <li class="ul li a" ><img src="img/indum.png"  > <b>Indumentaria Masculina</b></a> </li>
+             <div class="container__cards" id="indum-container">
+        <!-- Aquí se insertarán las tarjetas de productos desde JavaScript -->
+      </div>
+      <li class="ul li a"><img src="img/induf.png" > <b>Indumentaria Femenina</b></li></a>
+      <div class="container__cards" id="induf-container">
+        <!-- Aquí se insertarán las tarjetas de productos desde JavaScript -->
+      </div>
+      <li class="ul ll a"><img src="img/electro.png"  ><b>Electrodomésticos</b></a> </li>
+      <div class="container__cards" id="electro-container">
+        <!-- Aquí se insertarán las tarjetas de productos desde JavaScript -->
+      </div>
+      <li class="ul li a"><img src="img/joyeria.png"  ><b>Joyería</b></a> </li>
+      <div class="container__cards" id="joyeria-container">
+        <!-- Aquí se insertarán las tarjetas de productos desde JavaScript -->
+      </div>
+     </ul>
+      <script src="js/categorias.js"></script>
+    
 </div>
 
 <footer>
