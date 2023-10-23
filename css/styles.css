@@ -355,9 +355,9 @@ button:hover {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .header_e-lorem {
-    display: none;
+    display: flex;
   }
 
   .menu-hamburguesa {
@@ -366,7 +366,7 @@ button:hover {
     display: block;
     color: white;
     margin-right: 0.5em;
-  }
+position: relative;  }
 
   .header_logo_celular {
     display: block;
