@@ -307,17 +307,46 @@ button:hover {
   .header_e-lorem {
     display: none;
   }
-
+/*desde aca el cambio*/
   .nav_bar {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: -3em;
+    top:80px;
+    width: 11em;
+    height: 160px;
+    background-color: #0c1c43;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    padding: 0.5em;
   }
-
+.nav_bar.active{
+  opacity: 1;
+  pointer-events: all;
+}
+.nav_bar ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nav_bar ul li{
+  margin-bottom: 1em;
+}
+.nav_bar a{
+  padding: 0.5em;
+  
+}
   .menu-hamburguesa {
-    font-size: 30px;
+    /*font-size: 30px;
     cursor: pointer;
     display: block;
     color: white;
     margin-right: 0.5em;
+    flex-direction: column;*/
+    position: relative;
   }
 
   .contenido {

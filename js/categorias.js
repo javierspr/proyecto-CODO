@@ -5,8 +5,12 @@ const electroContainer = document.getElementById('electro-container');
 const joyeriaContainer = document.getElementById('joyeria-container');
 const asideContainer = document.querySelector('.aside');
 const totalContainer = document.querySelector('.total');
-
+//const para el dropdown
+const toggleMenuButton = document.querySelector('.menu-hamburguesa');
+const navBar = document.querySelector('.nav_bar');
 let totalPrecio = 0;
+//menu desplegable
+toggleMenuButton.addEventListener('click',() => {navBar.classList.toggle('active')});
 
 // Función para actualizar el aside con el título y precio seleccionados
 function actualizarAside(title, price) {
