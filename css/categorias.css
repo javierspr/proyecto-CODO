@@ -362,7 +362,7 @@ button:hover {
   
 }
   .menu-hamburguesa {
-    font-size: 30px;
+   /* font-size: 30px;
     cursor: pointer;
     display: block;
     color: white;
@@ -388,6 +388,7 @@ button:hover {
     display: block;
     color: white;
     margin-right: 0.5em;
+    position: relative;
   }
 
   .header_logo_celular {
@@ -404,3 +405,4 @@ button:hover {
     display: none
   }
 }
+/*CAMBIOS*/
