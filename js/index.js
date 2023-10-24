@@ -1,37 +1,44 @@
 const API_url = 'https://fakestoreapi.com/products';
 const productContainer = document.getElementById('product-container');
 const asideContainer = document.querySelector('.aside');
-const carritoContainer=document.querySelector('.carritoContainer')
 const totalContainer = document.querySelector('.total');
-const carritoTotal = document.querySelector('.carritoTotal')
+const carritoContainer=document.querySelector('.carritoContainer');
+const carritoTotal = document.querySelector('.carritoTotal');
 let totalPrecio = 0;
 
 
-//const para el dropdown
+//const para el dropdown del menu
 const toggleMenuButton = document.querySelector('.menu-hamburguesa');
 const navBar = document.querySelector('.nav_bar');
 
 
 //menu desplegable
 toggleMenuButton.addEventListener('click',() => {navBar.classList.toggle('active')});
+
+
 // Función para actualizar el aside con el título y precio seleccionados
 
 function actualizarAside(title, price) {
-  
-  const item = document.createElement('div');
-  item.classList.add('item');
+  const asideItem = document.createElement('div');
+  asideItem.classList.add('item');
+
+  const carritoItem = document.createElement('div');
+  carritoItem.classList.add('item');
 
   const itemName = document.createElement('span');
   itemName.textContent = title;
 
   const itemPrice = document.createElement('span');
-  itemPrice.textContent = `$${price}`;
+  itemPrice.textContent = `....$${price}`;
 
-  item.appendChild(itemName);
-  item.appendChild(itemPrice);
+  asideItem.appendChild(itemName.cloneNode(true));  // Clona los nodos para aside y carrito
+  asideItem.appendChild(itemPrice.cloneNode(true));
 
-  asideContainer.appendChild(item);
-  carritoContainer.appendChild(item);
+  carritoItem.appendChild(itemName);
+  carritoItem.appendChild(itemPrice);
+
+  asideContainer.appendChild(asideItem);
+  carritoContainer.appendChild(carritoItem);
 
   // Actualiza el total
   totalPrecio += price;

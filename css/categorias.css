@@ -235,6 +235,46 @@ button:hover {
   display: inline-block;
 }
 
+.carrito1000 {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: none;
+  padding: 0px;
+  width: 400px;
+
+}
+.carrito1000 img{
+  margin:0px;
+  width: 100%;
+}
+
+#toggleCartButton {
+  width: 20%;
+  right:0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.carrito-dropdown {
+  font-size: 1em;
+  color: #0c1c43;
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.carrito.active .carrito-dropdown {
+  display: block;
+}
+
 /*MEDIA QUERIES*/
 
 @media (max-width: 1000px) {
@@ -309,6 +349,10 @@ button:hover {
     margin: 9em 3em 5em 3em;
   }
 
+  .carrito1000 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 
 
