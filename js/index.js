@@ -1,7 +1,9 @@
 const API_url = 'https://fakestoreapi.com/products';
 const productContainer = document.getElementById('product-container');
 const asideContainer = document.querySelector('.aside');
+const carritoContainer=document.querySelector('.carritoContainer')
 const totalContainer = document.querySelector('.total');
+const carritoTotal = document.querySelector('.carritoTotal')
 let totalPrecio = 0;
 
 
@@ -29,10 +31,12 @@ function actualizarAside(title, price) {
   item.appendChild(itemPrice);
 
   asideContainer.appendChild(item);
+  carritoContainer.appendChild(item);
 
   // Actualiza el total
   totalPrecio += price;
   totalContainer.textContent = `Total: $${totalPrecio.toFixed(2)}`;
+  carritoTotal.textContent = `Total: $${totalPrecio.toFixed(2)}`;
 }
 
 // Realiza la solicitud a la API
@@ -80,3 +84,23 @@ fetch(API_url)
   .catch(error => {
     console.error('Error al cargar los productos:', error);
   });
+
+  // Seleccionar elementos necesarios
+const toggleCartButton = document.getElementById('toggleCartButton');
+const carritoDropdown = document.querySelector('.carrito-dropdown');
+
+// Variable para controlar el estado del carrito
+let carritoAbierto = false;
+
+// Agregar un evento de clic al botón del carrito
+toggleCartButton.addEventListener('click', () => {
+  // Cambiar el estado del carrito
+  carritoAbierto = !carritoAbierto;
+
+  // Mostrar u ocultar el carrito
+  if (carritoAbierto) {
+    carritoDropdown.style.display = 'block';
+  } else {
+    carritoDropdown.style.display = 'none';
+  }
+});

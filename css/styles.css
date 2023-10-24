@@ -122,7 +122,7 @@ body {
 }
 
 .carro-compra {
-  height: 2.5em;
+  height: 4em;
   margin: 0.5em
 }
 
@@ -224,6 +224,42 @@ button:hover {
   height: 2em;
   display: inline-block;
 }
+.carrito1000 {
+  display: none;
+  position: fixed;
+  top: 97px;
+  left: 0;
+  background-color: none;
+  padding: 5px;
+  width: 400px;
+
+}
+.carrito1000 img{
+  width: 50%;
+}
+
+#toggleCartButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.carrito-dropdown {
+  font-size: 1em;
+  color: #0c1c43;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.carrito.active .carrito-dropdown {
+  display: block;
+}
 
 /*MEDIA QUERIES*/
 
@@ -298,6 +334,10 @@ button:hover {
     text-align: justify;
     margin: 9em 3em 5em 3em;
   }
+/* Estilos para el carrito y su contenido */
+.carrito1000 {
+  display: block;
+}
 
 }
 
