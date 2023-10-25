@@ -98,7 +98,6 @@ body {
 
 }
 
-
 .contenedor-buscador input {
   display: flex;
   height: 100%;
@@ -111,7 +110,6 @@ body {
 
 .contenedor-buscador img {
   height: 100%;
-
 }
 
 .total {
@@ -122,7 +120,7 @@ body {
 }
 
 .carro-compra {
-  height: 2.5em;
+  height: 4em;
   margin: 0.5em
 }
 
@@ -215,7 +213,6 @@ footer {
   justify-content: end;
 }
 
-
 button {
   display: flex;
   background-color: #007bff;
@@ -234,7 +231,13 @@ button:hover {
   height: 2em;
   display: inline-block;
 }
-
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
 .carrito1000 {
   display: none;
   position: fixed;
@@ -242,7 +245,7 @@ button:hover {
   right: 0;
   background-color: none;
   padding: 0px;
-  width: 400px;
+  width: 500px;
 
 }
 .carrito1000 img{
@@ -310,7 +313,6 @@ button:hover {
     padding-left: 1em;
   }
 
-
   .header_e-lorem {
     display: none;
   }
@@ -319,7 +321,6 @@ button:hover {
     justify-content: center;
     padding: 0;
   }
-
 
   .aside {
     display: none;
@@ -353,6 +354,12 @@ button:hover {
     display: flex;
     flex-direction: row-reverse;
   }
+ 
+  .item button:last-child {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
 }
 
 
@@ -370,7 +377,7 @@ button:hover {
   .header_e-lorem {
     display: none;
   }
-/*desde aca el cambio*/
+/*menu hamburguesa desplegable*/
   .nav_bar {
     display: flex;
     flex-direction: column;
@@ -384,7 +391,6 @@ button:hover {
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
     padding: 0.5em;
-    
   }
 .nav_bar.active{
   opacity: 1;
@@ -394,16 +400,14 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  
+  justify-content: center; 
 }
 .nav_bar ul li{
   margin-bottom: 1em;
 }
 .nav_bar a{
   padding: 0.5em;
-  font-size: 2em;
-  
+  font-size: 2em; 
 }
   .menu-hamburguesa {
     font-size: 30px;

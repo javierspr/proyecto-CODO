@@ -26,8 +26,6 @@ body {
   justify-content: space-between;
 }
 
-/*LOGO IZQUIERDO DEL HEADER*/
-
 .header_logo {
   height: 90%;
   margin-left: 2em;
@@ -42,8 +40,6 @@ body {
 .header_logo_celular {
   display: none;
 }
-
-/*NAV*/
 
 .navbar_container {
   display: flex;
@@ -69,9 +65,9 @@ body {
 }
 
 .faq__container {
-  width: 95%;
+  width: 96%;
   padding: 1em;
-  margin-left: 2em;
+  margin: 2em;
 }
 
 .titulo__preguntas-respuestas {
@@ -249,6 +245,10 @@ footer {
     border: none;
   }
 
+  .faq__container {
+    width: 90%;
+  }
+
 }
 
 
@@ -257,17 +257,47 @@ footer {
     display: none;
   }
 
-  .nav_bar {
-    display: none;
-  }
-
-  .menu-hamburguesa {
-    font-size: 30px;
-    cursor: pointer;
-    display: block;
-    color: white;
-    margin-right: 0.5em;
-  }
+ /*menu hamburguesa desplegable*/
+ .nav_bar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: -1em;
+  top:80px;
+  width: 15em;
+  height: 220px;
+  background-color: #0c1c43;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  padding: 0.5em;
+}
+.nav_bar.active{
+opacity: 1;
+pointer-events: all;
+}
+.nav_bar ul{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center; 
+}
+.nav_bar ul li{
+margin-bottom: 1em;
+}
+.nav_bar a{
+padding: 0.5em;
+font-size: 2em; 
+}
+.menu-hamburguesa {
+  font-size: 30px;
+  cursor: pointer;
+  display: block;
+  color: white;
+  margin-right: 0.5em;
+  flex-direction: column;
+  position: relative;
+}
 }
 
 

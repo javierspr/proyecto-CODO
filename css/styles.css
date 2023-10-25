@@ -224,6 +224,13 @@ button:hover {
   height: 2em;
   display: inline-block;
 }
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
 .carrito1000 {
   display: none;
   position: fixed;
@@ -231,7 +238,7 @@ button:hover {
   right: 0;
   background-color: none;
   padding: 0px;
-  width: 400px;
+  width: 500px;
 
 }
 .carrito1000 img{
@@ -342,6 +349,12 @@ button:hover {
   display: flex;
   flex-direction: row-reverse;
 }
+/* Estilo para el botón "-" en el carrito */
+.item button:last-child {
+  margin-left: auto;
+  margin-right: 10px; /* Espacio entre el botón y el precio */
+}
+
 }
 
 

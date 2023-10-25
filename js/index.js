@@ -15,9 +15,7 @@ const navBar = document.querySelector('.nav_bar');
 //menu desplegable
 toggleMenuButton.addEventListener('click',() => {navBar.classList.toggle('active')});
 
-
-// Función para actualizar el aside con el título y precio seleccionados
-
+//Funcion para actualizar aside y carrito flotante
 function actualizarAside(title, price) {
   const asideItem = document.createElement('div');
   asideItem.classList.add('item');
@@ -29,9 +27,9 @@ function actualizarAside(title, price) {
   itemName.textContent = title;
 
   const itemPrice = document.createElement('span');
-  itemPrice.textContent = `....$${price}`;
+  itemPrice.textContent = `$${price}`;
 
-  asideItem.appendChild(itemName.cloneNode(true));  // Clona los nodos para aside y carrito
+  asideItem.appendChild(itemName.cloneNode(true));
   asideItem.appendChild(itemPrice.cloneNode(true));
 
   carritoItem.appendChild(itemName);
@@ -40,11 +38,40 @@ function actualizarAside(title, price) {
   asideContainer.appendChild(asideItem);
   carritoContainer.appendChild(carritoItem);
 
+  // Agregar botón para restar
+  const removeButtonAside = document.createElement('button');
+  removeButtonAside.textContent = '-';
+  removeButtonAside.addEventListener('click', () => {
+    restarAside(asideItem, carritoItem, price);
+  });
+  asideItem.appendChild(removeButtonAside);
+
+  const removeButtonCarrito = document.createElement('button');
+  removeButtonCarrito.textContent = '-';
+  removeButtonCarrito.addEventListener('click', () => {
+    restarAside(asideItem, carritoItem, price);
+  });
+  carritoItem.appendChild(removeButtonCarrito);
+
   // Actualiza el total
   totalPrecio += price;
   totalContainer.textContent = `Total: $${totalPrecio.toFixed(2)}`;
   carritoTotal.textContent = `Total: $${totalPrecio.toFixed(2)}`;
 }
+
+function restarAside(asideItem, carritoItem, price) {
+  // Elimina el elemento del aside
+  asideContainer.removeChild(asideItem);
+
+  // Elimina el elemento del carrito
+  carritoContainer.removeChild(carritoItem);
+
+  // Actualiza el total restando el precio
+  totalPrecio -= price;
+  totalContainer.textContent = `Total: $${totalPrecio.toFixed(2)}`;
+  carritoTotal.textContent = `Total: $${totalPrecio.toFixed(2)}`;
+}
+
 
 // Realiza la solicitud a la API
 fetch(API_url)

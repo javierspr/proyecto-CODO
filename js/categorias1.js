@@ -5,22 +5,22 @@ const electroContainer = document.getElementById('electro-container');
 const joyeriaContainer = document.getElementById('joyeria-container');
 const asideContainer = document.querySelector('.aside');
 const totalContainer = document.querySelector('.total');
-const carritoContainer=document.querySelector('.carritoContainer');
-const carritoTotal = document.querySelector('.carritoTotal');
-let totalPrecio = 0;
+const productContainer = document.getElementById('product-container');
 
-//menu desplegable
+//const para el dropdown
 const toggleMenuButton = document.querySelector('.menu-hamburguesa');
 const navBar = document.querySelector('.nav_bar');
+let totalPrecio = 0;
+//menu desplegable
 toggleMenuButton.addEventListener('click',() => {navBar.classList.toggle('active')});
 
-//Funcion para actualizar aside y carrito flotante
-function actualizarAside(title, price) {
-  const asideItem = document.createElement('div');
-  asideItem.classList.add('item');
 
-  const carritoItem = document.createElement('div');
-  carritoItem.classList.add('item');
+
+// Función para actualizar el aside con el título y precio seleccionados
+function actualizarAside(title, price) {
+  const item = document.createElement('div');
+  item.classList.add('item');
+  item.classList.remove('item');
 
   const itemName = document.createElement('span');
   itemName.textContent = title;
@@ -28,48 +28,16 @@ function actualizarAside(title, price) {
   const itemPrice = document.createElement('span');
   itemPrice.textContent = `$${price}`;
 
-  asideItem.appendChild(itemName.cloneNode(true));
-  asideItem.appendChild(itemPrice.cloneNode(true));
+  item.appendChild(itemName);
+  item.appendChild(itemPrice);
 
-  carritoItem.appendChild(itemName);
-  carritoItem.appendChild(itemPrice);
-
-  asideContainer.appendChild(asideItem);
-  carritoContainer.appendChild(carritoItem);
-
-  // Agregar botón para restar
-  const removeButtonAside = document.createElement('button');
-  removeButtonAside.textContent = '-';
-  removeButtonAside.addEventListener('click', () => {
-    restarAside(asideItem, carritoItem, price);
-  });
-  asideItem.appendChild(removeButtonAside);
-
-  const removeButtonCarrito = document.createElement('button');
-  removeButtonCarrito.textContent = '-';
-  removeButtonCarrito.addEventListener('click', () => {
-    restarAside(asideItem, carritoItem, price);
-  });
-  carritoItem.appendChild(removeButtonCarrito);
+  asideContainer.appendChild(item);
 
   // Actualiza el total
   totalPrecio += price;
   totalContainer.textContent = `Total: $${totalPrecio.toFixed(2)}`;
-  carritoTotal.textContent = `Total: $${totalPrecio.toFixed(2)}`;
 }
 
-function restarAside(asideItem, carritoItem, price) {
-  // Elimina el elemento del aside
-  asideContainer.removeChild(asideItem);
-
-  // Elimina el elemento del carrito
-  carritoContainer.removeChild(carritoItem);
-
-  // Actualiza el total restando el precio
-  totalPrecio -= price;
-  totalContainer.textContent = `Total: $${totalPrecio.toFixed(2)}`;
-  carritoTotal.textContent = `Total: $${totalPrecio.toFixed(2)}`;
-}
 // Realiza la solicitud a la API
 fetch(API_url)
   .then(response => response.json())
@@ -97,14 +65,20 @@ fetch(API_url)
 
       const addButton = document.createElement('button');
       addButton.textContent = '+';
-
       addButton.addEventListener('click', () => {
         actualizarAside(product.title, product.price);
+      });
+
+/* */ const removeButton = document.createElement('button');
+      removeButton.textContent = '-';
+      removeButton.addEventListener('click', () => {
+        actualizarAside(product.title, -product.price);
       });
 
       const buttons = document.createElement('div');
       buttons.classList.add('botones');
       buttons.appendChild(addButton);
+      buttons.appendChild(removeButton);
 
       // Agrega los elementos al contenedor de productos
       card.appendChild(img);
@@ -133,16 +107,22 @@ fetch(API_url)
         price.textContent = `$${product.price.toFixed(2)}`;
   
         const addButton = document.createElement('button');
+        const removeButton = document.createElement('button');
         addButton.textContent = '+';
-  
+        
         addButton.addEventListener('click', () => {
           actualizarAside(product.title, product.price);
         });
+        removeButton.textContent = '-';
+        removeButton.addEventListener('click', () => {
+          actualizarAside(product.title, -product.price);
+        });
+  
   
         const buttons = document.createElement('div');
         buttons.classList.add('botones');
         buttons.appendChild(addButton);
-  
+        buttons.appendChild(removeButton);
         // Agrega los elementos al contenedor de productos
         card.appendChild(img);
         card.appendChild(title);
@@ -175,11 +155,16 @@ fetch(API_url)
         addButton.addEventListener('click', () => {
           actualizarAside(product.title, product.price);
         });
+        const removeButton = document.createElement('button');
+      removeButton.textContent = '-';
+      removeButton.addEventListener('click', () => {
+        actualizarAside(product.title, -product.price);
+      });
   
         const buttons = document.createElement('div');
         buttons.classList.add('botones');
         buttons.appendChild(addButton);
-  
+        buttons.appendChild(removeButton);
         // Agrega los elementos al contenedor de productos
         card.appendChild(img);
         card.appendChild(title);
@@ -212,11 +197,16 @@ fetch(API_url)
         addButton.addEventListener('click', () => {
           actualizarAside(product.title, product.price);
         });
+        const removeButton = document.createElement('button');
+      removeButton.textContent = '-';
+      removeButton.addEventListener('click', () => {
+        actualizarAside(product.title, -product.price);
+      });
   
         const buttons = document.createElement('div');
         buttons.classList.add('botones');
         buttons.appendChild(addButton);
-  
+        buttons.appendChild(removeButton);
         // Agrega los elementos al contenedor de productos
         card.appendChild(img);
         card.appendChild(title);
@@ -230,21 +220,3 @@ fetch(API_url)
   .catch(error => {
     console.error('Error al cargar los productos:', error);
   });
-
- // Funcionalidad del carrito flotante
- const toggleCartButton = document.getElementById('toggleCartButton');
- const carritoDropdown = document.querySelector('.carrito-dropdown');
- 
- let carritoAbierto = false;
- 
- toggleCartButton.addEventListener('click', () => {
-   // Cambiar el estado del carrito
-   carritoAbierto = !carritoAbierto;
- 
-   // Mostrar u ocultar el carrito
-   if (carritoAbierto) {
-     carritoDropdown.style.display = 'block';
-   } else {
-     carritoDropdown.style.display = 'none';
-   }
- });
