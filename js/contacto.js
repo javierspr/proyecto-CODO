@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
 var preguntas = document.querySelectorAll(".pregunta");
 
 preguntas.forEach(function (pregunta) {
@@ -33,8 +34,3 @@ preguntas.forEach(function (pregunta) {
     }
   });
 });
-
-//menu desplegable
-const toggleMenuButton = document.querySelector('.menu-hamburguesa');
-const navBar = document.querySelector('.nav_bar');
-toggleMenuButton.addEventListener('click',() => {navBar.classList.toggle('active')});
