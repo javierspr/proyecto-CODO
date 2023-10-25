@@ -34,3 +34,8 @@ preguntas.forEach(function (pregunta) {
     }
   });
 });
+
+//menu desplegable
+const toggleMenuButton = document.querySelector('.menu-hamburguesa');
+const navBar = document.querySelector('.nav_bar');
+toggleMenuButton.addEventListener('click',() => {navBar.classList.toggle('active')});
